@@ -1,0 +1,43 @@
+$primaryColor: #FFFFFF;
+$secondaryColor: #000000;
+$tertiaryColor: #FF0000;
+$mainFontFamily: 'Open Sans', sans-serif;
+
+@mixin heading {
+	font-family: $mainFontFamily;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+@mixin projectLayout {
+	height: 250px;
+	width: 250px;
+	background-color: $secondaryColor;
+	background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a0ecf51928569.58fef7802efd7.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin grayscale($grayPercent){
+	-webkit-filter: grayscale($grayPercent);
+	-moz-filter: grayscale($grayPercent);
+	-o-filter: grayscale($grayPercent);
+	-ms-filter: grayscale($grayPercent);
+	filter: grayscale($grayPercent);
+}
+
+@mixin blur($blurAmt){
+	-webkit-filter: blur($blurAmt);
+	-moz-filter: blur($blurAmt);
+	-o-filter: blur($blurAmt);
+	-ms-filter: blur($blurAmt);
+	filter: blur($blurAmt);
+}
+
+@mixin scale($scale){
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-o-transform: scale($scale);
+	-ms-transform: scale($scale);
+	transform: scale($scale);
+}

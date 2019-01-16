@@ -1,0 +1,275 @@
+@import 'master.scss';
+
+#profileSplitTop {
+	height: 17%;
+}
+
+#profileSplitCenter {
+	height: 61%;
+}
+
+#profileSplitBottom {
+	height: 22%;
+	padding-top: 5px;
+
+	div {
+		padding: 5px;
+	}
+
+	i {
+		font-size: 1.3em;
+	}
+
+	span {
+		font-size: .9em;
+	}
+}
+
+.designer-profile {
+	height: 300px;
+	background-color: black;
+	margin-bottom: 15px;
+}
+
+.profile-details {
+	top: 0;
+	z-index: 4;
+}
+
+.profile-bg-image {
+	background-position: center;
+	background-size: cover;
+	z-index: 1;
+	@include blur(2px);
+	@include scale(1.1);
+}
+
+.profile-bg-alter {
+	top: 0;
+	z-index: 2;
+	height: 105%;
+	background-color: white;
+	opacity: .60;
+}
+
+.splitv-third {
+	background: transparent;
+	z-index: 3;
+}
+
+.splith-third {
+	width: 33%;
+	background: transparent;
+}
+
+.profile-image {
+	width: 40%;
+	padding-top: 40%;
+	border-radius: 70px;
+	background-position: center;
+	background-size: cover;
+	@include grayscale(100%);
+}
+
+.profile-name {
+	@include heading();
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 1.4em;
+	text-align: center;
+
+	i {
+		margin-left: 5px;
+	}
+}
+
+.view-data-control {
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+}
+.profile-fields {
+	font-family: $mainFontFamily;
+	font-size: .9em;
+	text-align: center;
+}
+
+.profile-views {
+	border-right: 2px solid black;
+}
+
+.profile-appreciations {}
+
+.profile-comments {
+	border-left: 2px solid black;
+}
+
+.scroll-left {
+	padding: .1em .6em;
+	color: $primaryColor;
+	background-color: $secondaryColor;
+	border: none;
+	border-radius: 36px;
+	font-size: 1em;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+}
+
+.stats-ribbon {
+	right: 10%;
+	background-color: #ff0d00;
+	height: 37%;
+	width: 15%;
+	color: white;
+	z-index: 4;
+
+	i {
+		font-size: 1.5em;
+	}
+
+	span {
+		font-size: .6875em;
+		width: 80%;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $mainFontFamily;
+		font-weight: 300;
+	}
+}
+
+#listOfDesigners {
+	position: absolute;
+	top: 220px;
+	z-index: 10;
+	background-color: white;
+	width: 100vw;
+
+	ul {
+		text-align: center;
+
+		li {
+			list-style: none;
+			font-family: $mainFontFamily;
+		}
+
+		li:hover {
+			background-color: black;
+			color:$primaryColor;
+		}
+	}
+}
+
+#profileSplitBottom {
+	margin-top: 6%;
+}
+
+.project-img {
+	display: block;
+}
+
+.designer-projects {
+	padding: 1em 2.3em;
+}
+.projects-wrapper {
+	width: 100% !important;
+}
+@media only screen and (min-width: 600px) {
+	.profile-image {
+		border-radius: 10em;
+	}
+
+	#profileSplitBottom {
+		margin-top: 30%;
+	}
+
+	#listOfDesigners {
+		margin-top: 23%;
+	}
+
+	.latest-projects {
+		height: 57%;
+		i {
+			font-size: 3.3em;
+		}
+	}
+
+	.stats-ribbon {
+		width: 10%;
+		height: 51%;
+	}
+
+	.projects-wrapper {
+		margin-top: 33%!important;
+		width: 100vw !important;
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+
+	}
+	.project-img {
+		margin:0 !important;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.profile-image {
+		border-radius: 50%;
+	    background-repeat: no-repeat;
+	    width: 22%;
+	    padding: 10%;
+	    position: absolute;
+	    margin-left: -15%;
+	}
+
+	.designers-info-div {
+		position: absolute;
+	    margin-left: 8%;
+	    margin-top: 5%;
+	}
+
+	.stats-ribbon {
+		height: 69%;
+		width: 4%;
+
+		i {
+			font-size: 1.9em;
+		}
+
+		span {
+			display: block;
+			margin-top: 5%;
+			font-size: 0.7em;
+		}
+	}
+
+	.projects-wrapper {
+		margin-top: 10% !important;
+		width: 80vw!important;
+		margin: 0 auto;
+	}
+
+
+	#profileSplitBottom {
+		margin-top: -1%;
+	}
+
+	#listOfDesigners {
+		margin-top: -1.8%;
+	    width: 30vw;
+	    margin-left: 47%;
+	}
+	.third-heading {
+
+	}
+	.view-data-control {
+		width: 25vw;
+		margin: 0 auto;
+		margin-right: 26%;
+	}
+	.latest-projects .col-sm {
+    width: 300px;
+	}
+	.project-img {
+		margin:0 !important;
+	}
+}
